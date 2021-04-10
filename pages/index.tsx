@@ -96,7 +96,7 @@ const Index: React.FC<IndexProps> = (props) => {
     if (scrollContainer.current?.style) {
       scrollContainer.current.style.transform = `translate3d(0, -${
         data.rounded //: data.rounded * 0.4
-      }px, 0) skewY(${skew}deg)`;
+      }px, 0) `; //skewY(${skew}deg)
     }
 
     //loop vai raf
