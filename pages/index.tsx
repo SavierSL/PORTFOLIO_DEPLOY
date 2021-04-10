@@ -54,7 +54,7 @@ const Index: React.FC<IndexProps> = (props) => {
   useEffect(() => {
     //access the body height and assign the height of scroll container
     document.body.style.height = `${
-      scrollContainer.current.getBoundingClientRect().height * 3.15 //adjust here to fix scroling height
+      scrollContainer.current.getBoundingClientRect().height //* 3.15 //adjust here to fix scroling height
     }px`;
 
     window.addEventListener("scroll", handleScroll);
@@ -95,7 +95,7 @@ const Index: React.FC<IndexProps> = (props) => {
     //Assign skew and smooth scrolling to the scroll container
     if (scrollContainer.current?.style) {
       scrollContainer.current.style.transform = `translate3d(0, -${
-        data.rounded * 0.4
+        data.rounded //: data.rounded * 0.4
       }px, 0) skewY(${skew}deg)`;
     }
 
