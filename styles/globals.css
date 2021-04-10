@@ -1,0 +1,17 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+:root {
+  background: #0f0f0f;
+  cursor: none;
+  overflow-x: hidden;
+}
+/* Optional: show position indicator in red */

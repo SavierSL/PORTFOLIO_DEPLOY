@@ -1,0 +1,114 @@
+.myName {
+  overflow: hidden;
+  letter-spacing: 0.5rem;
+  h1 {
+    font-size: 2rem;
+  }
+}
+.myTitleContainer {
+  overflow: hidden;
+  position: relative;
+  &_myTitleSkills1 {
+    font-size: 4rem;
+    letter-spacing: 0.8rem;
+    width: 100%;
+    color: #92278f;
+    @include respond(phone) {
+      font-size: 2rem;
+    }
+  }
+  &_myTitleSkills2 {
+    font-size: 4rem;
+    letter-spacing: 0.8rem;
+    width: 100%;
+    margin-left: 0.5rem;
+    margin-top: 0.1rem;
+    position: absolute;
+    top: 0;
+    opacity: 0.1;
+    color: violet;
+  }
+}
+.nameRef {
+  overflow: hidden;
+
+  height: 900px;
+  position: absolute;
+  opacity: 0;
+}
+.imageRevealFirstRef {
+  overflow: hidden;
+  background: red;
+  height: 800px;
+  position: absolute;
+  opacity: 0;
+}
+.imageRevealFirstRef2 {
+  width: 10px;
+  z-index: 101;
+  overflow: hidden;
+  background: red;
+  height: 1000px;
+  position: absolute;
+  opacity: 0;
+  left: 0;
+  margin-top: 30rem;
+  @include respond(phone) {
+    margin-top: 0rem;
+  }
+}
+.imageAndGradContainer {
+  display: flex;
+  @include respond(phone) {
+    display: flex;
+    flex-direction: column;
+  }
+  &_grad {
+    width: 30%;
+    margin-left: 1rem;
+    transition: all 0.5s ease;
+    @include respond(phone) {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 6rem;
+    }
+  }
+}
+.imageAndGradContainer2 {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  text-align: right;
+
+  @include respond(phone) {
+    display: flex;
+    margin-top: 5rem;
+    flex-direction: column;
+  }
+  &_grad {
+    width: 50%;
+    margin-left: 1rem;
+    @include respond(phone) {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 1rem;
+      height: 100%;
+      margin-bottom: 5rem;
+    }
+  }
+}
+.modelContainer2 {
+  height: 100%;
+  width: 100%;
+  z-index: 200;
+  position: absolute;
+
+  right: 0;
+}
+.sentence2 {
+  h1 {
+    font-size: 1.5rem;
+    opacity: 0;
+    margin-top: 0rem;
+  }
+}

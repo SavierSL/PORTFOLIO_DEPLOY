@@ -1,0 +1,95 @@
+.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+}
+.animate {
+  margin-top: -3rem;
+}
+.first {
+  span {
+    display: inline-block;
+    position: relative;
+    font-size: 1.3rem;
+    &:not(:last-child) {
+      margin-right: 1.8rem;
+    }
+  }
+}
+.ball {
+  z-index: 5001;
+  background: violet;
+  width: 1rem;
+  height: 1rem;
+  position: fixed;
+  border-radius: 100%;
+  margin-left: 1.2rem;
+  margin-top: 4.2rem;
+}
+.lineContainer {
+  height: 80vh;
+  position: fixed;
+  overflow: hidden;
+  margin-left: 1.6rem;
+  margin-top: 4.5rem;
+  z-index: 5001;
+
+  &_line {
+    height: 80vh;
+    width: 0.2rem;
+    background: violet;
+    position: relative;
+  }
+}
+.fullStack {
+  @include respond(phone) {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-left: 1rem;
+  }
+  span {
+    font-weight: 700;
+    letter-spacing: 1rem;
+    display: inline-block;
+    position: relative;
+    font-size: 1.3rem;
+    &:not(:last-child) {
+      margin-right: 1.8rem;
+    }
+    @include respond(phone) {
+      text-align: center;
+      margin-left: 0;
+      font-size: 0.8rem;
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+.scrollDown {
+  margin-top: 8rem;
+  @include respond(phone) {
+    margin-top: 4rem;
+  }
+  &_first {
+    margin-right: 1rem;
+    @include respond(phone) {
+      margin-right: 0rem;
+    }
+  }
+  span {
+    letter-spacing: 1rem;
+    @include respond(phone) {
+      letter-spacing: 0.5rem;
+    }
+    display: inline-block;
+    position: relative;
+    color: violet;
+    &:not(:first-child) {
+      margin-left: 0.8rem;
+    }
+    font-size: 1rem;
+  }
+}
