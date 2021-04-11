@@ -103,8 +103,8 @@ const ScrollContainer: React.SFC<ScrollContainerProps> = ({ children }) => {
           className="app"
           style={{
             zIndex: 2,
-            // overflow: "hidden",
-            // position: "fixed",
+            overflow: "hidden",
+            position: "fixed",
             top: 0,
             left: 0,
             height: "100%",
