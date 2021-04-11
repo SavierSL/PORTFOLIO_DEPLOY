@@ -77,7 +77,7 @@ const MainContainer: React.FC = (props: any) => {
         className={styles.html}
         style={{
           color: props.theme.fontColor,
-          background: props.theme.bg,
+
           overflow: "hidden",
         }}
       >
