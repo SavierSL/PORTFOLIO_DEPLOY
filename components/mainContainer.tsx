@@ -78,7 +78,7 @@ const MainContainer: React.FC = (props: any) => {
         style={{
           color: props.theme.fontColor,
           overflow: "hidden",
-          marginLeft: "auto",
+          marginLeft: "1rem",
           marginRight: "auto",
         }}
       >

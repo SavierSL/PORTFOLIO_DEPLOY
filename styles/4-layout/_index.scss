@@ -69,6 +69,7 @@
   }
 }
 .scrollDown {
+  margin-left: 1rem;
   margin-top: 8rem;
   @include respond(phone) {
     margin-top: 4rem;
