@@ -83,7 +83,7 @@
 
   @include respond(phone) {
     display: flex;
-    margin-top: 5rem;
+    margin-top: 1rem;
     flex-direction: column;
   }
   &_grad {

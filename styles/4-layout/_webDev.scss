@@ -3,6 +3,7 @@
   background: #151515;
   width: 100%;
   padding: 1rem;
+
   opacity: 0;
 
   &_projectRevealRef {
@@ -16,6 +17,7 @@
     overflow: hidden;
     width: 100%;
     position: relative;
+
     @include respond(phone) {
       height: 10rem;
     }
@@ -45,7 +47,7 @@
 .webDevContainer {
   overflow: hidden;
   height: 500vh;
-
+  margin-top: -6rem;
   &_webDevRef {
     overflow: hidden;
     height: 800px;

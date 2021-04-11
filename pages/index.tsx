@@ -12,8 +12,10 @@ import ScrollContainer from "../components/scrollContainer";
 import { motion } from "framer-motion";
 import { ballAnimatin, scrollAnimation } from "../components/animation";
 import CustomCursor from "../components/cursor";
+import useWindowDimensions from "../components/getWindow";
 
 const Index: React.FC<IndexProps> = (props) => {
+  const widthSize = useWindowDimensions().width;
   const data = {
     ease: 0.1,
     current: 0,
@@ -28,6 +30,25 @@ const Index: React.FC<IndexProps> = (props) => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+  let body = (
+    <>
+      <Intro />
+      <About />
+      <WebDev />
+    </>
+  );
+  if (widthSize > 700) {
+    body = (
+      <>
+        <ScrollContainer>
+          <Intro />
+          <About />
+          <WebDev />
+        </ScrollContainer>
+      </>
+    );
+  }
+
   return (
     <>
       <div
@@ -64,11 +85,7 @@ const Index: React.FC<IndexProps> = (props) => {
           </motion.div>
         </motion.div>
 
-        <MainContainer {...props}>
-          <Intro />
-          <About />
-          <WebDev />
-        </MainContainer>
+        <MainContainer {...props}>{body}</MainContainer>
       </div>
     </>
   );

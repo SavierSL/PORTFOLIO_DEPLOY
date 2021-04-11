@@ -314,13 +314,12 @@ const About: React.FC<{}> = () => {
       {/* we will adjust the height base on the responsiveness 1980 if cp and 1280px if web*/}
       <div
         style={{
-          height: "100%",
           overflow: "hidden",
           width: "100%",
           position: "relative",
         }}
       >
-        <Wrapper>
+        <Wrapper padding={false}>
           <div className={styles.myName}>
             <h1>I AM XAVIER SAN LORENZO</h1>
           </div>

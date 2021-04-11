@@ -86,7 +86,7 @@ const WebDev: React.SFC<WebDevProps> = () => {
   return (
     <>
       <div className={styles.webDevContainer}>
-        <Wrapper padding={true}>
+        <Wrapper padding={false}>
           <div
             className={styles.webDevContainer_webDevRef}
             ref={webDevRef}
