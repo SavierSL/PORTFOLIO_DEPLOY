@@ -11,6 +11,7 @@ import {
 } from "../components/redux/actions/transtition";
 import { useDispatch } from "react-redux";
 import Wrapper from "../components/wrapper";
+import styles from "../styles/main.module.scss";
 export interface BlogItProps {}
 
 const BlogIt: React.FC<BlogItProps> = (props) => {
@@ -55,16 +56,23 @@ const BlogIt: React.FC<BlogItProps> = (props) => {
           >
             <CustomCursor data={data} />
             <Wrapper>
-              <h1
-                onClick={() => {
-                  dispatch(onTransition());
-                  setTimeout(() => {
-                    return router.push("/qshare");
-                  }, 1000);
-                }}
-              >
-                BLOG IT
-              </h1>
+              <div className={styles.blogItContainer}>
+                <h1
+                  className={styles.titleHeading}
+                  onClick={() => {
+                    dispatch(onTransition());
+                    setTimeout(() => {
+                      return router.push("/qshare");
+                    }, 1000);
+                  }}
+                >
+                  BLOG IT
+                </h1>
+                <p className={styles.description}>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Dolor labore atque dolorum quam non cumque placeat qui ipsum!s
+                </p>
+              </div>
             </Wrapper>
           </motion.div>
         </MainContainer>
