@@ -34,11 +34,10 @@ const Index: React.FC<IndexProps> = (props) => {
         style={{
           zIndex: 2,
           overflow: "hidden",
-
-          top: 0,
-          left: 0,
           height: "100%",
+          // position: "absolute",
           width: "100%",
+          // background: "red",
         }}
       >
         <CustomCursor data={data} />

@@ -316,8 +316,8 @@ const About: React.FC<{}> = () => {
         style={{
           height: "100%",
           overflow: "hidden",
-
-          paddingBottom: "12rem",
+          width: "100%",
+          position: "relative",
         }}
       >
         <Wrapper>
@@ -472,17 +472,16 @@ const About: React.FC<{}> = () => {
                   alt="Picture of the author"
                 />
               </div>
-              <img
-                style={{
-                  height: "35rem",
-                  marginTop: "-5rem",
-                  marginLeft: "-5rem",
-                  position: "absolute",
-                }}
-                src="/career.png"
-                alt="Picture of the author"
-              />
             </div>
+            <img
+              style={{
+                height: "35rem",
+                marginTop: "-5rem",
+                marginLeft: "-5rem",
+              }}
+              src="/career.png"
+              alt="Picture of the author"
+            />
           </div>
         </Wrapper>
       </div>
