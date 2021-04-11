@@ -75,70 +75,46 @@ const ScrollContainer: React.SFC<ScrollContainerProps> = ({ children }) => {
   }, []);
   return (
     <>
-      <CustomCursor data={data} />
-      <motion.div exit={{ opacity: 0 }}>
-        <motion.div initial="initial" animate="animate">
-          <motion.div
-            style={{
-              marginTop: `${offsetY / 18 + 67.2}px`,
-              transition: `all 0.5s ease`,
-            }}
-            variants={ballAnimatin}
-            className={styles.ball}
-          ></motion.div>
-        </motion.div>
-        <motion.div
-          initial="initial"
-          animate="animate"
-          className={styles.lineContainer}
-        >
-          <motion.div
-            variants={scrollAnimation}
-            className={styles.lineContainer_line}
-          ></motion.div>
-        </motion.div>
-
+      <div
+        ref={app}
+        className="app"
+        style={{
+          zIndex: 2,
+          overflow: "hidden",
+          position: "fixed",
+          top: 0,
+          left: 0,
+          height: "100%",
+          width: "100%",
+        }}
+      >
         <div
-          ref={app}
-          className="app"
+          ref={scrollContainer}
+          className="scrollContainer"
+          style={{ zIndex: 2 }}
+        >
+          {children}
+        </div>
+        <img
+          ref={mainBg}
+          src="/wires.png"
+          alt="aha"
           style={{
-            zIndex: 2,
+            top: "-30rem",
             overflow: "hidden",
             position: "fixed",
-            top: 0,
+            zIndex: -1,
+            opacity: "0%",
+            width: "60vw",
+            marginTop: `${offsetY / 450}rem`,
             left: 0,
-            height: "100%",
-            width: "100%",
+            right: 0,
+            transition: "all 1s ease",
+            marginLeft: "auto",
+            marginRight: "auto",
           }}
-        >
-          <div
-            ref={scrollContainer}
-            className="scrollContainer"
-            style={{ zIndex: 2 }}
-          >
-            {children}
-          </div>
-          <img
-            ref={mainBg}
-            src="/wires.png"
-            alt="aha"
-            style={{
-              top: "-30rem",
-              overflow: "hidden",
-              position: "fixed",
-              zIndex: -1,
-              opacity: "0%",
-              width: "60vw",
-              marginTop: `${offsetY / 450}rem`,
-              left: 0,
-              right: 0,
-              transition: "all 1s ease",
-              marginLeft: "auto",
-              marginRight: "auto",
-            }}
-          />
-        </div>
-      </motion.div>
+        />
+      </div>
     </>
   );
 };
