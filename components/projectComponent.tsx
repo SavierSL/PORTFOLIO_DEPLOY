@@ -12,6 +12,7 @@ export interface ProjectComponentProps {
   description: string;
   imageName: string;
   link: string;
+  stacks: string[];
 }
 
 const ProjectComponent: React.SFC<ProjectComponentProps> = ({
@@ -19,6 +20,7 @@ const ProjectComponent: React.SFC<ProjectComponentProps> = ({
   description,
   imageName,
   link,
+  stacks,
 }) => {
   const router = useRouter();
   const clickDetailsRef = useRef();
@@ -34,6 +36,7 @@ const ProjectComponent: React.SFC<ProjectComponentProps> = ({
     threshold: 0.5,
     //make sure to adjust the height of div that you ref to it to adjust it
   });
+
   const projectFadeIn = (e: any) => {
     gsap.to(e.current, { opacity: 1 });
   };
@@ -114,8 +117,19 @@ const ProjectComponent: React.SFC<ProjectComponentProps> = ({
             alt=""
           />
         </div>
-
-        <p ref={descriptionRef} style={{ fontSize: "1.5rem" }}>
+        <div className={styles.projectContainer_stacks}>
+          {stacks.map((stack) => {
+            return (
+              <div className={styles.projectContainer_stacks_container}>
+                <p>{stack}</p>
+              </div>
+            );
+          })}
+        </div>
+        <p
+          ref={descriptionRef}
+          style={{ fontSize: "1.5rem", marginTop: "1rem" }}
+        >
           {description}
         </p>
       </div>

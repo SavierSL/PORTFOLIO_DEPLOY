@@ -56,6 +56,7 @@ const Index: React.FC<IndexProps> = (props) => {
           zIndex: 2,
           overflow: "hidden",
           height: "100%",
+
           // position: "absolute",
           width: "100%",
           // background: "red",

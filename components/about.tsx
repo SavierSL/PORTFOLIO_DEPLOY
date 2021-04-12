@@ -445,7 +445,7 @@ const About: React.FC<{}> = () => {
                     }}
                   >
                     <h1 ref={sentence21}>
-                      I am 3D modeler and a graphic artist,
+                      I am a 3D modeler and a graphic artist,
                     </h1>
                     <h1 ref={sentence22}>but recently I focused </h1>
                     <h1 ref={sentence23}>web development.</h1>

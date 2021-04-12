@@ -42,12 +42,32 @@
       }
     }
   }
+  &_stacks {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    &_container {
+      margin-top: 1rem;
+      background: rgb(15, 0, 15);
+      padding: 0.5rem;
+      margin-right: 0.4rem;
+      p {
+        font-size: 0.8rem;
+        @include respond(phone) {
+          font-size: 0.7rem;
+        }
+      }
+    }
+  }
 }
 
 .webDevContainer {
   overflow: hidden;
-  height: 500vh;
+  height: 800vh;
   margin-top: -6rem;
+
   &_webDevRef {
     overflow: hidden;
     height: 800px;
@@ -67,4 +87,41 @@
   }
 }
 .blogItContainer {
+}
+
+.frontEndProjectsContainer {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  column-gap: 1px;
+  row-gap: 10px;
+
+  @include respond(phone) {
+    grid-template-columns: 100%;
+    column-gap: 0;
+    row-gap: 0;
+  }
+  &_projectContainer {
+    padding: 1rem;
+    width: 98%;
+    height: 20rem;
+    position: relative;
+    overflow: hidden;
+    background: rgb(24, 23, 23);
+    @include respond(phone) {
+      height: 11rem;
+      margin-top: 0.5rem;
+    }
+    &_imgContainer {
+      padding: 3rem;
+      overflow: hidden;
+      height: 15rem;
+      position: relative;
+      img {
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: 100%;
+      }
+    }
+  }
 }
