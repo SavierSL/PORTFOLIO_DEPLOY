@@ -15,8 +15,8 @@ interface CustomCursorProps {
 const CustomCursor: React.FC<CustomCursorProps> = ({ data }) => {
   const cursorStyle = useSelector((state: any) => state.cursor.cursorStyle);
   const [mousePosition, setMousePoisition] = useState({
-    x: 400,
-    y: 400,
+    x: 0,
+    y: 0,
   });
   const [offsetY, setOffsetY] = useState(0);
 
@@ -43,6 +43,7 @@ const CustomCursor: React.FC<CustomCursorProps> = ({ data }) => {
         style={{
           left: `${mousePosition.x}px`,
           top: `${mousePosition.y}px`,
+          position: "absolute",
         }}
       ></Cursor>
     </>
