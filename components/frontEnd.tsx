@@ -11,10 +11,37 @@ const FrontEndProjects: React.SFC<FrontEndProjectsProps> = () => {
     "ecom",
     "twitter",
   ];
+  const imagesData = [
+    { image: "anime", techs: ["html", "css"] },
+    { image: "awwward", techs: ["JavaScript", "GatbyJS", "Gsap", "Canva"] },
+    { image: "news", techs: ["html", "css"] },
+    { image: "burger", techs: ["JaveScript", "ReactJS", "css", "Redux"] },
+    { image: "calcu", techs: ["JavaScript", "css", "ReactJS", "Redux"] },
+    {
+      image: "danny",
+      techs: ["ReactJS", "gsap", "sass"],
+    },
+    {
+      image: "twitter",
+      techs: ["JavaScript", "css", "ReactJS", "ReactContext"],
+    },
+    {
+      image: "threejs",
+      techs: ["JavaScript", "ThreeJS", "ReactJS"],
+    },
+    {
+      image: "fueled",
+      techs: ["JavaScript", "ReactRedux", "ReactJS"],
+    },
+    {
+      image: "todolist",
+      techs: ["JavaScript", "ReactRedux", "ReactJS"],
+    },
+  ];
   return (
     <>
       <div className={styles.frontEndProjectsContainer}>
-        {images.map((image) => {
+        {imagesData.map((data) => {
           return (
             <div className={styles.frontEndProjectsContainer_projectContainer}>
               <div
@@ -22,7 +49,24 @@ const FrontEndProjects: React.SFC<FrontEndProjectsProps> = () => {
                   styles.frontEndProjectsContainer_projectContainer_imgContainer
                 }
               >
-                <img src={`/${image}.png`} alt="" />
+                <img src={`/${data.image}.png`} alt="" />
+              </div>
+              <div
+                className={
+                  styles.frontEndProjectsContainer_projectContainer_stack
+                }
+              >
+                {data.techs.map((usedTech) => {
+                  return (
+                    <div
+                      className={
+                        styles.frontEndProjectsContainer_projectContainer_stack_background
+                      }
+                    >
+                      <p>{usedTech}</p>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           );

@@ -98,9 +98,10 @@
   @include respond(phone) {
     grid-template-columns: 100%;
     column-gap: 0;
-    row-gap: 0;
+    row-gap: 8px;
   }
   &_projectContainer {
+    text-align: center;
     padding: 1rem;
     width: 98%;
     height: 20rem;
@@ -108,19 +109,46 @@
     overflow: hidden;
     background: rgb(24, 23, 23);
     @include respond(phone) {
-      height: 11rem;
+      height: 100%;
       margin-top: 0.5rem;
+      padding: 0.5rem;
     }
     &_imgContainer {
       padding: 3rem;
       overflow: hidden;
       height: 15rem;
       position: relative;
+      @include respond(phone) {
+        height: 8.5rem;
+        margin-bottom: 0.4rem;
+      }
       img {
         top: 0;
         left: 0;
         position: absolute;
         width: 100%;
+      }
+    }
+    &_stack {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+      @include respond(phone) {
+        margin-top: 0;
+      }
+      row-gap: 10px;
+      &_background {
+        background: black;
+        margin-right: 0.5rem;
+
+        padding: 0.5rem;
+        p {
+          padding: 0.5rrem;
+          font-size: 0.9rem;
+          @include respond(phone) {
+            font-size: 0.7rem;
+          }
+        }
       }
     }
   }
