@@ -84,6 +84,7 @@ const Intro: React.SFC<IntroProps> = () => {
               }}
               className={styles.primaryHeading}
               style={{
+                fontFamily: "Oxygen",
                 color: "#662D91",
                 marginRight: "-8.2rem",
                 zIndex: 2,
@@ -114,6 +115,7 @@ const Intro: React.SFC<IntroProps> = () => {
               }}
               className={styles.primaryHeading}
               style={{
+                fontFamily: "Oxygen",
                 color: "#92278F",
                 marginLeft: `-${offsetY * 0.15}px`,
                 transition: `all 0.5s ease`,

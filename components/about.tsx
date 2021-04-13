@@ -392,6 +392,7 @@ const About: React.FC<{}> = () => {
                   <h1
                     ref={sentence1}
                     style={{
+                      color: "#fff",
                       fontSize: "1.5rem",
                       opacity: "0",
                     }}
@@ -401,6 +402,7 @@ const About: React.FC<{}> = () => {
                   <h1
                     ref={sentence2}
                     style={{
+                      color: "#fff",
                       fontSize: "1.5rem",
                       opacity: "0",
                     }}
@@ -410,6 +412,7 @@ const About: React.FC<{}> = () => {
                   <h1
                     ref={sentence3}
                     style={{
+                      color: "#fff",
                       fontSize: "1.5rem",
                       opacity: "0",
                     }}
@@ -444,11 +447,15 @@ const About: React.FC<{}> = () => {
                       transition: "all 1s ease",
                     }}
                   >
-                    <h1 ref={sentence21}>
+                    <h1 ref={sentence21} style={{ color: "#fff" }}>
                       I am a 3D modeler and a graphic artist,
                     </h1>
-                    <h1 ref={sentence22}>but recently I focused </h1>
-                    <h1 ref={sentence23}>web development.</h1>
+                    <h1 ref={sentence22} style={{ color: "#fff" }}>
+                      but recently I focused in
+                    </h1>
+                    <h1 ref={sentence23} style={{ color: "#fff" }}>
+                      web development.
+                    </h1>
                   </div>
                 </div>
 

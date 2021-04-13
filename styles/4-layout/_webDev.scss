@@ -142,6 +142,7 @@
 
         padding: 0.5rem;
         p {
+          color: #fff;
           padding: 0.5rrem;
           font-size: 0.9rem;
           @include respond(phone) {

@@ -128,7 +128,7 @@ const ProjectComponent: React.SFC<ProjectComponentProps> = ({
         </div>
         <p
           ref={descriptionRef}
-          style={{ fontSize: "1.5rem", marginTop: "1rem" }}
+          style={{ fontSize: "1.5rem", marginTop: "1rem", color: "#fff" }}
         >
           {description}
         </p>

@@ -63,7 +63,7 @@ const FrontEndProjects: React.SFC<FrontEndProjectsProps> = () => {
                         styles.frontEndProjectsContainer_projectContainer_stack_background
                       }
                     >
-                      <p>{usedTech}</p>
+                      <p style={{ color: "#fff" }}>{usedTech}</p>
                     </div>
                   );
                 })}
