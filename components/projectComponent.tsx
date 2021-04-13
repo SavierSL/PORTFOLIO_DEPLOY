@@ -76,7 +76,10 @@ const ProjectComponent: React.SFC<ProjectComponentProps> = ({
           className={styles.projectContainer_projectRevealRef}
           ref={projectRevealRef}
         ></div>
-        <h1 ref={titleRef} style={{ marginBottom: "1rem" }}>
+        <h1
+          ref={titleRef}
+          style={{ marginBottom: "1rem", fontSize: "2rem", color: "#fff" }}
+        >
           {title}
         </h1>
         <div className={styles.projectContainer_websiteContainer}>
@@ -121,7 +124,7 @@ const ProjectComponent: React.SFC<ProjectComponentProps> = ({
           {stacks.map((stack) => {
             return (
               <div className={styles.projectContainer_stacks_container}>
-                <p>{stack}</p>
+                <p style={{ color: "#fff" }}>{stack}</p>
               </div>
             );
           })}
