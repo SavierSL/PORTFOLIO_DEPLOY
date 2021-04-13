@@ -13,6 +13,7 @@ import { motion } from "framer-motion";
 import { ballAnimatin, scrollAnimation } from "../components/animation";
 import CustomCursor from "../components/cursor";
 import useWindowDimensions from "../components/getWindow";
+import SkillSet from "../components/skillSet";
 
 const Index: React.FC<IndexProps> = (props) => {
   const widthSize = useWindowDimensions().width;
@@ -35,6 +36,7 @@ const Index: React.FC<IndexProps> = (props) => {
       <Intro />
       <About />
       <WebDev />
+      <SkillSet />
     </>
   );
   if (widthSize > 700) {
@@ -44,6 +46,7 @@ const Index: React.FC<IndexProps> = (props) => {
           <Intro />
           <About />
           <WebDev />
+          <SkillSet />
         </ScrollContainer>
       </>
     );

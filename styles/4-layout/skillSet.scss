@@ -1,0 +1,29 @@
+.skillSetContainer {
+  height: 220vh;
+  width: 100vw;
+
+  position: relative;
+
+  opacity: 100%;
+  &_bg {
+    height: 100%;
+    width: 100%;
+    background: rgb(66, 0, 51);
+    transform: translateX(-110%);
+  }
+}
+.skillSetReveal {
+  opacity: 0;
+  height: 200vh;
+  width: 2rem;
+  background: blue;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.languages {
+  img {
+    height: 4rem;
+    fill: red;
+  }
+}
