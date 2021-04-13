@@ -60,7 +60,6 @@ const SkillSet: React.FC<SkillSetProps> = () => {
             <h1 className={styles.skillSet}>Skill Set</h1>
           </div>
           <div className={styles.skillsAndStack}>
-            <h1>Skills and Stack</h1>
             <div className={styles.stack}>
               <div className={styles.icon}>
                 {languages.map((item) => {
