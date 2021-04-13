@@ -21,9 +21,29 @@
   top: 0;
   left: 0;
 }
-.languages {
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.icon {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: center;
+
+  &_title {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 1rem;
+  }
   img {
-    height: 4rem;
-    fill: red;
+    border-radius: 10%;
+    height: 3.5rem;
+    width: 3.5rem;
+    background: rgb(236, 22, 236);
   }
 }

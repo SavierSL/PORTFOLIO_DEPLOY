@@ -1,12 +1,30 @@
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { useIntersection } from "react-use";
 import styles from "../styles/main.module.scss";
 
 import gsap from "gsap";
+import Wrapper from "./wrapper";
 
 export interface SkillSetProps {}
 
 const SkillSet: React.FC<SkillSetProps> = () => {
+  const languages = ["javascript", "typescript", "html5", "css3", "python"];
+  const frameworks = [
+    "react",
+    "nextjs",
+    "gatsby",
+    "sass",
+    "styled",
+    "reduxsaga",
+    "graphql",
+    "redux",
+    "greensock",
+    "apollographql",
+    "nodejs",
+    "express",
+    "git",
+  ];
+  const db = ["postgresql", "mongodb", "mysql"];
   const skillSetBgReg = useRef();
   const bgReveal = useRef();
   const interSection = useIntersection(bgReveal, {
@@ -36,24 +54,49 @@ const SkillSet: React.FC<SkillSetProps> = () => {
     <>
       <div className={styles.skillSetContainer}>
         <div ref={bgReveal} className={styles.skillSetReveal}></div>
-        <div ref={skillSetBgReg} className={styles.skillSetContainer_bg}>
+
+        <Wrapper padding={false}>
           <div>
-            <h1 style={{ fontSize: "22rem", opacity: "50%" }}>Skill Set</h1>
+            <h1 className={styles.skillSet}>Skill Set</h1>
           </div>
           <div className={styles.skillsAndStack}>
             <h1>Skills and Stack</h1>
             <div className={styles.stack}>
-              <div className={styles.languages}>
-                <img src="/postgresql.svg" alt="" />
-                <img src="/typescript.svg" alt="" />
+              <div className={styles.icon}>
+                {languages.map((item) => {
+                  return (
+                    <div className={styles.icon_title}>
+                      <img src={`/${item}.svg`} alt="" />
+                      <p>{item}</p>
+                    </div>
+                  );
+                })}
               </div>
-              <div className={styles.frameworks}></div>
-              <div className={styles.backEndLang}></div>
+              <div className={styles.icon}>
+                {frameworks.map((item) => {
+                  return (
+                    <div className={styles.icon_title}>
+                      <img src={`/${item}.svg`} alt="" />
+                      <p>{item}</p>
+                    </div>
+                  );
+                })}
+              </div>
+              <div className={styles.icon}>
+                {db.map((item) => {
+                  return (
+                    <div className={styles.icon_title}>
+                      <img src={`/${item}.svg`} alt="" />
+                      <p>{item}</p>
+                    </div>
+                  );
+                })}
+              </div>
               <div className={styles.database}></div>
               <div className={styles.control}></div>
             </div>
           </div>
-        </div>
+        </Wrapper>
       </div>
     </>
   );

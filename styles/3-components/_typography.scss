@@ -7,3 +7,10 @@
 .description {
   font-size: 1.5rem;
 }
+.skillSet {
+  font-size: 15rem;
+  opacity: 50%;
+  @include respond(phone) {
+    font-size: 5rem;
+  }
+}
