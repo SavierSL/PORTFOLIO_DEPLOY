@@ -14,7 +14,7 @@ import Wrapper from "../components/wrapper";
 import styles from "../styles/main.module.scss";
 export interface BlogItProps {}
 
-const Qshare: React.FC<BlogItProps> = (props) => {
+const Taku: React.FC<BlogItProps> = (props) => {
   const data = {
     ease: 0.1,
     current: 0,
@@ -55,14 +55,14 @@ const Qshare: React.FC<BlogItProps> = (props) => {
             <CustomCursor data={data} />
             <Wrapper>
               <div className={styles.projectDetailsContainer}>
-                <h1 className={styles.titleHeading}>QSHARE</h1>
+                <h1 className={styles.titleHeading}>Taku</h1>
                 <p className={styles.description}>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                   Dolor labore atque dolorum quam non cumque placeat qui ipsum!s
                 </p>
                 <div className={styles.projectDetail}>
                   <div className={styles.projectDetail_image}>
-                    <img src="/qshare2.png" alt="" />
+                    <img src="/taku.png" alt="" />
                   </div>
                   <div className={styles.projectDetail_content}>
                     <h1>
@@ -73,7 +73,7 @@ const Qshare: React.FC<BlogItProps> = (props) => {
                 </div>
                 <div className={styles.projectDetail}>
                   <div className={styles.projectDetail_image}>
-                    <img src="/qshare3.png" alt="" />
+                    <img src="/taku2.png" alt="" />
                   </div>
                   <div className={styles.projectDetail_content}>
                     <h1>
@@ -84,7 +84,7 @@ const Qshare: React.FC<BlogItProps> = (props) => {
                 </div>
                 <div className={styles.projectDetail}>
                   <div className={styles.projectDetail_image}>
-                    <img src="/qshare3.png" alt="" />
+                    <img src="/taku3.png" alt="" />
                   </div>
                   <div className={styles.projectDetail_content}>
                     <h1>
@@ -95,7 +95,7 @@ const Qshare: React.FC<BlogItProps> = (props) => {
                 </div>
                 <div className={styles.projectDetail}>
                   <div className={styles.projectDetail_image}>
-                    <img src="/qshare4.png" alt="" />
+                    <img src="/taku4.png" alt="" />
                   </div>
                   <div className={styles.projectDetail_content}>
                     <h1>
@@ -106,7 +106,7 @@ const Qshare: React.FC<BlogItProps> = (props) => {
                 </div>
                 <div className={styles.projectDetail}>
                   <div className={styles.projectDetail_image}>
-                    <img src="/qshare5.png" alt="" />
+                    <img src="/taku5.png" alt="" />
                   </div>
                   <div className={styles.projectDetail_content}>
                     <h1>
@@ -124,4 +124,4 @@ const Qshare: React.FC<BlogItProps> = (props) => {
   );
 };
 
-export default Qshare;
+export default Taku;

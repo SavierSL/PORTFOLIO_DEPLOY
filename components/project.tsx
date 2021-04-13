@@ -81,7 +81,7 @@ const Project: React.SFC<ProjectProps> = () => {
               "Argon2",
               "PostgresQL",
             ]}
-            link="qshare"
+            link="taku"
             title="Taku"
             imageName="taku2"
             description="A web for otakus, they can search an anime and post something about it. The community can also comment on their post"
@@ -102,7 +102,7 @@ const Project: React.SFC<ProjectProps> = () => {
               "Mongoose",
               "Multer",
             ]}
-            link="qshare"
+            link="dev"
             title="Dev"
             imageName="dev"
             description="A web app for developers to connect to check on their teammates progress and infos"

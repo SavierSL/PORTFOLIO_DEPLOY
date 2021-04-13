@@ -8,10 +8,10 @@
   font-size: 1.5rem;
 }
 .skillSet {
-  font-size: 15rem;
+  font-size: 12rem;
   opacity: 50%;
   color: #fff;
   @include respond(phone) {
-    font-size: 5rem;
+    font-size: 3rem;
   }
 }

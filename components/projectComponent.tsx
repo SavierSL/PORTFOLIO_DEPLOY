@@ -112,7 +112,7 @@ const ProjectComponent: React.SFC<ProjectComponentProps> = ({
               dispatch(pointerCursor());
               dispatch(onTransition());
               setTimeout(() => {
-                return router.push("/blogit");
+                return router.push(`/${link}`);
               }, 1000);
             }}
             ref={imageProjectRef}

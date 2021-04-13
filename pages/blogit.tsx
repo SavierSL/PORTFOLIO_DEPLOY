@@ -72,6 +72,14 @@ const BlogIt: React.FC<BlogItProps> = (props) => {
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                   Dolor labore atque dolorum quam non cumque placeat qui ipsum!s
                 </p>
+                <div className={styles.projectDetail}>
+                  <div className={styles.projectDetail_image}>
+                    <img src="/blogit2.png" alt="" />
+                  </div>
+                  <div className={styles.projectDetail_content}>
+                    <h1>One of the most</h1>
+                  </div>
+                </div>
               </div>
             </Wrapper>
           </motion.div>
