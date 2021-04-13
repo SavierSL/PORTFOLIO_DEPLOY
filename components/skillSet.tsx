@@ -24,7 +24,7 @@ const SkillSet: React.FC<SkillSetProps> = () => {
     "express",
     "git",
   ];
-  const db = ["postgresql", "mongodb", "mysql"];
+  const db = ["postgresql", "mongodb"];
   const skillSetBgReg = useRef();
   const bgReveal = useRef();
   const interSection = useIntersection(bgReveal, {
