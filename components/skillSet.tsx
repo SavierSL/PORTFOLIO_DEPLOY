@@ -76,7 +76,7 @@ const SkillSet: React.FC<SkillSetProps> = () => {
                   return (
                     <div className={styles.icon_title}>
                       <img src={`/${item}.svg`} alt="" />
-                      <p>{item}</p>
+                      <p style={{ color: "#fff" }}>{item}</p>
                     </div>
                   );
                 })}
@@ -86,13 +86,11 @@ const SkillSet: React.FC<SkillSetProps> = () => {
                   return (
                     <div className={styles.icon_title}>
                       <img src={`/${item}.svg`} alt="" />
-                      <p>{item}</p>
+                      <p style={{ color: "#fff" }}>{item}</p>
                     </div>
                   );
                 })}
               </div>
-              <div className={styles.database}></div>
-              <div className={styles.control}></div>
             </div>
           </div>
         </Wrapper>
