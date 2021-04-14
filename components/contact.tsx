@@ -55,13 +55,15 @@ const Contact: React.FC<ContactProps> = () => {
             <form onSubmit={sendEmail}>
               <div className={styles.contactDetailsForm}>
                 <div className={styles.contactDetails_contactMe}>
-                  <h1>
+                  <h1 style={{ color: "#fff" }}>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Dicta eaque labore fugiat placeat eveniet commodi!
                   </h1>
                   <div style={{ marginTop: "1rem" }}>
-                    <h1>sanlorenzoxavier@gmail.com</h1>
-                    <h1>09451384905</h1>
+                    <h1 style={{ color: "#fff" }}>
+                      sanlorenzoxavier@gmail.com
+                    </h1>
+                    <h1 style={{ color: "#fff" }}>09451384905</h1>
                   </div>
                 </div>
                 <div className={styles.formContainer}>

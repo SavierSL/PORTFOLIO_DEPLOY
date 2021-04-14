@@ -1,16 +1,13 @@
+import React, { useEffect, useRef } from "react";
+import { useIntersection } from "react-use";
 import styles from "../styles/main.module.scss";
+import gsap from "gsap";
+import ProjectFrontEndComponent from "./projectComponentFrontEnd";
 export interface FrontEndProjectsProps {}
 
 const FrontEndProjects: React.SFC<FrontEndProjectsProps> = () => {
-  const images = [
-    "anime",
-    "awwward",
-    "news",
-    "burger",
-    "calcu",
-    "ecom",
-    "twitter",
-  ];
+  const imageFrontEndRef = useRef();
+
   const imagesData = [
     { image: "anime", techs: ["html", "css"] },
     { image: "awwward", techs: ["JavaScript", "GatbyJS", "Gsap", "Canva"] },
@@ -38,38 +35,12 @@ const FrontEndProjects: React.SFC<FrontEndProjectsProps> = () => {
       techs: ["JavaScript", "ReactRedux", "ReactJS"],
     },
   ];
+
   return (
     <>
       <div className={styles.frontEndProjectsContainer}>
         {imagesData.map((data) => {
-          return (
-            <div className={styles.frontEndProjectsContainer_projectContainer}>
-              <div
-                className={
-                  styles.frontEndProjectsContainer_projectContainer_imgContainer
-                }
-              >
-                <img src={`/${data.image}.png`} alt="" />
-              </div>
-              <div
-                className={
-                  styles.frontEndProjectsContainer_projectContainer_stack
-                }
-              >
-                {data.techs.map((usedTech) => {
-                  return (
-                    <div
-                      className={
-                        styles.frontEndProjectsContainer_projectContainer_stack_background
-                      }
-                    >
-                      <p style={{ color: "#fff" }}>{usedTech}</p>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          );
+          return <ProjectFrontEndComponent data={data} />;
         })}
       </div>
     </>

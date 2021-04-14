@@ -397,7 +397,7 @@ const About: React.FC<{}> = () => {
                       opacity: "0",
                     }}
                   >
-                    I graduated as a Bachelor
+                    I graduated as a Bachelor of
                   </h1>
                   <h1
                     ref={sentence2}

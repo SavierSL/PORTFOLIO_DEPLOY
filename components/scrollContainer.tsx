@@ -43,7 +43,7 @@ const ScrollContainer: React.SFC<ScrollContainerProps> = ({ children }) => {
     if (scrollContainer.current?.style) {
       scrollContainer.current.style.transform = `translate3d(0, -${
         data.rounded //: data.rounded * 0.4
-      }px, 0) `; //skewY(${skew}deg)
+      }px, 0)`; //skewY(${skew}deg)
     }
 
     //loop vai raf
@@ -52,7 +52,7 @@ const ScrollContainer: React.SFC<ScrollContainerProps> = ({ children }) => {
   useEffect(() => {
     //access the body height and assign the height of scroll container
     document.body.style.height = `${
-      scrollContainer.current.getBoundingClientRect().height //adjust here to fix scroling height
+      scrollContainer.current.getBoundingClientRect().height * 1.04 //adjust here to fix scroling height
     }px`;
 
     window.addEventListener("scroll", handleScroll);

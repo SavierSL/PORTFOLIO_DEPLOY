@@ -90,7 +90,7 @@ const ProjectComponent: React.SFC<ProjectComponentProps> = ({
               style={{
                 opacity: 0,
                 transform: `translateY(3rem)`,
-                background: "darkviolet",
+                background: "#000",
                 padding: "1rem",
               }}
             >
