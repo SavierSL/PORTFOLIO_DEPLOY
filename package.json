@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "@types/greensock": "^1.15.32",
+    "emailjs": "^3.4.0",
+    "emailjs-com": "^2.6.4",
     "framer-motion": "^4.0.3",
     "gsap": "^3.6.1",
     "lodash.debounce": "^4.0.8",

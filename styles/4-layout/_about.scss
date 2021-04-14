@@ -114,3 +114,59 @@
     margin-top: 0rem;
   }
 }
+.contactContainer {
+}
+.contactDetailsForm {
+  display: flex;
+  position: relative;
+  @include respond(phone) {
+    flex-direction: column;
+  }
+}
+.contactDetails {
+  display: flex;
+  position: relative;
+  a {
+    img {
+      @include respond(phone) {
+        width: 3rem;
+      }
+    }
+  }
+  &_contactMe {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+    h1 {
+      font-weight: 300;
+    }
+    @include respond(phone) {
+      width: 100%;
+      h1 {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+.formContainer {
+  h1 {
+    font-weight: 300;
+  }
+  width: 50%;
+  @include respond(phone) {
+    width: 100%;
+    h1 {
+      font-size: 0.9rem;
+    }
+  }
+}
+.input {
+  margin: auto;
+  margin-bottom: 1rem;
+
+  input {
+    padding: 1rem;
+    width: 100%;
+  }
+}

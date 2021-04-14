@@ -15,7 +15,7 @@ const Project: React.SFC<ProjectProps> = () => {
         }}
       >
         <div style={{ marginBottom: "1rem" }}>
-          <h1 style={{ fontSize: "3rem" }}>FULL STACK PROJECTS</h1>
+          <h1 style={{ fontSize: "3rem" }}>FULL STACK </h1>
         </div>
 
         <div style={{ marginBottom: "1rem" }}>
@@ -115,7 +115,7 @@ const Project: React.SFC<ProjectProps> = () => {
           marginTop: "2rem",
         }}
       >
-        <h1 style={{ fontSize: "3rem" }}>FRONT END PROJECTS</h1>
+        <h1 style={{ fontSize: "3rem" }}>FRONT END </h1>
         <FrontEndProjects />
       </div>
     </>

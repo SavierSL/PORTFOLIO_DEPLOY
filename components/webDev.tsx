@@ -58,7 +58,7 @@ const WebDev: React.SFC<WebDevProps> = () => {
   const fadeInLetters = (element: data[]) => {
     element.map((e) => {
       gsap.to(e.ref.current, {
-        opacity: 1,
+        opacity: "50%",
         x: 0,
         delay: e.delay,
         duration: 0.2,

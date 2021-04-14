@@ -52,7 +52,7 @@ const ScrollContainer: React.SFC<ScrollContainerProps> = ({ children }) => {
   useEffect(() => {
     //access the body height and assign the height of scroll container
     document.body.style.height = `${
-      scrollContainer.current.getBoundingClientRect().height * 2 //adjust here to fix scroling height
+      scrollContainer.current.getBoundingClientRect().height //adjust here to fix scroling height
     }px`;
 
     window.addEventListener("scroll", handleScroll);
