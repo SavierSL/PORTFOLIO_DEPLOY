@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useIntersection } from "react-use";
 import styles from "../styles/main.module.scss";
 import gsap from "gsap";
@@ -13,11 +13,12 @@ const ProjectFrontEndComponent: React.SFC<FrontEndProjectsProps> = ({
   data,
 }) => {
   const imageFrontEndRef = useRef();
+  const [firstMount, setFirstMount] = useState(false);
   const fonrtEndProjRef = useRef();
   const intersection = useIntersection(imageFrontEndRef, {
     root: null,
     rootMargin: "0px",
-    threshold: 0.5,
+    threshold: 0.2,
   });
   const images = [
     "anime",
@@ -56,21 +57,28 @@ const ProjectFrontEndComponent: React.SFC<FrontEndProjectsProps> = ({
     },
   ];
   const fadeIn = (el: any) => {
+    if (!firstMount) {
+      return;
+    }
     gsap.to(el.current, { opacity: 1, duration: 1, ease: "ease" });
   };
   const fadeOut = (el: any) => {
+    setFirstMount(true);
     gsap.to(el.current, { opacity: 0 });
   };
+
   useEffect(() => {
-    intersection && intersection.intersectionRatio < 0.5
+    intersection && intersection.intersectionRatio < 0.2
       ? fadeOut(fonrtEndProjRef)
       : fadeIn(fonrtEndProjRef);
   }, [intersection]);
+
   return (
     <>
       <div
         ref={fonrtEndProjRef}
         className={styles.frontEndProjectsContainer_projectContainer}
+        style={{ opacity: 0 }}
       >
         <div
           ref={imageFrontEndRef}

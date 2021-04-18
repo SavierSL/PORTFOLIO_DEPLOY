@@ -73,7 +73,7 @@ const Index: React.FC<IndexProps> = (props) => {
           <motion.div initial="initial" animate="animate">
             <motion.div
               style={{
-                marginTop: `${offsetY / 18 + 67.2}px`,
+                marginTop: `${offsetY / 13.5 + 67.2}px`,
                 transition: `all 0.5s ease`,
               }}
               variants={ballAnimatin}

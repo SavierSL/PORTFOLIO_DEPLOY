@@ -40,7 +40,7 @@ const FrontEndProjects: React.SFC<FrontEndProjectsProps> = () => {
     <>
       <div className={styles.frontEndProjectsContainer}>
         {imagesData.map((data) => {
-          return <ProjectFrontEndComponent data={data} />;
+          return <ProjectFrontEndComponent key={data.image} data={data} />;
         })}
       </div>
     </>
