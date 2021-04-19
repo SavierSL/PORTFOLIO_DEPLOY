@@ -55,10 +55,22 @@ const Qshare: React.FC<BlogItProps> = (props) => {
             <CustomCursor data={data} />
             <Wrapper>
               <div className={styles.projectDetailsContainer}>
-                <h1 className={styles.titleHeading}>QSHARE</h1>
+                <h1
+                  className={styles.titleHeading}
+                  style={{ marginBottom: "1rem" }}
+                >
+                  QSHARE
+                </h1>
                 <p className={styles.description}>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Dolor labore atque dolorum quam non cumque placeat qui ipsum!s
+                  This app that I built is for teachers and student, A teacher
+                  can make a{" "}
+                  <span style={{ color: "orange" }}>
+                    quiz sets, questions and also multiple choices of the
+                    question
+                  </span>{" "}
+                  the quiz set will generate a
+                  <span style={{ color: "orange" }}> unique code </span> a
+                  student can use it to search for the quiz set.
                 </p>
                 <div className={styles.projectDetail}>
                   <div className={styles.projectDetail_image}>
@@ -66,8 +78,14 @@ const Qshare: React.FC<BlogItProps> = (props) => {
                   </div>
                   <div className={styles.projectDetail_content}>
                     <h1>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Deserunt corrupti necessitatibus qui a dolorem culpa.
+                      This a
+                      <span style={{ color: "orange" }}>
+                        {" "}
+                        student dash board
+                      </span>{" "}
+                      if a student still have not answered the quiz set the
+                      he/she added an answer button is visible on his/her
+                      dashboard, or the total score of the student's quiz set
                     </h1>
                   </div>
                 </div>
@@ -77,8 +95,10 @@ const Qshare: React.FC<BlogItProps> = (props) => {
                   </div>
                   <div className={styles.projectDetail_content}>
                     <h1>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Aspernatur ducimus a nihil, necessitatibus hic corrupti.
+                      This section is when a student submitted the answers, a
+                      studnet can check the total scores and the correct
+                      answers. Dev note: I might change the privacy of this
+                      page. It might be better if only a teacher can see it
                     </h1>
                   </div>
                 </div>
@@ -99,8 +119,15 @@ const Qshare: React.FC<BlogItProps> = (props) => {
                   </div>
                   <div className={styles.projectDetail_content}>
                     <h1>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Deserunt corrupti necessitatibus qui a dolorem culpa.
+                      This a
+                      <span style={{ color: "orange" }}>
+                        {" "}
+                        teacher's dashboard
+                      </span>{" "}
+                      A teacher can create a quiz here and also can view the
+                      details of the quiz sets. If a teacher wants to see more
+                      details about the quiz sets, like checking if who already
+                      answered on his quiz set
                     </h1>
                   </div>
                 </div>
@@ -110,8 +137,10 @@ const Qshare: React.FC<BlogItProps> = (props) => {
                   </div>
                   <div className={styles.projectDetail_content}>
                     <h1>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Deserunt corrupti necessitatibus qui a dolorem culpa.
+                      This section is when a teacher is creating a quiz, a
+                      teacher sets the title of the quiz set and it's subject.
+                      Then she/he can add a questions and multiple choices on
+                      that question
                     </h1>
                   </div>
                 </div>

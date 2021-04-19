@@ -66,8 +66,10 @@ const Taku: React.FC<BlogItProps> = (props) => {
                   </div>
                   <div className={styles.projectDetail_content}>
                     <h1>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Deserunt corrupti necessitatibus qui a dolorem culpa.
+                      A user can log in here in
+                      <span className={styles.span_orange}>
+                        log in section
+                      </span>{" "}
                     </h1>
                   </div>
                 </div>
@@ -77,8 +79,10 @@ const Taku: React.FC<BlogItProps> = (props) => {
                   </div>
                   <div className={styles.projectDetail_content}>
                     <h1>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Aspernatur ducimus a nihil, necessitatibus hic corrupti.
+                      <span className={styles.span_orange}>Home page</span> an
+                      otaku can see recent posts of other otaku, he can comment
+                      and edit his comment on their taku post, if a user owns
+                      the post, a user can delete or edit it.
                     </h1>
                   </div>
                 </div>
@@ -88,8 +92,12 @@ const Taku: React.FC<BlogItProps> = (props) => {
                   </div>
                   <div className={styles.projectDetail_content}>
                     <h1>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Deserunt corrupti necessitatibus qui a dolorem culpa.
+                      <span className={styles.span_orange}>
+                        Anime search page
+                      </span>{" "}
+                      A user can search an anime here and use it to post his
+                      thoughts about it, the anime will give the details about
+                      it like the title or when it was created.
                     </h1>
                   </div>
                 </div>
@@ -99,8 +107,8 @@ const Taku: React.FC<BlogItProps> = (props) => {
                   </div>
                   <div className={styles.projectDetail_content}>
                     <h1>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Deserunt corrupti necessitatibus qui a dolorem culpa.
+                      <span className={styles.span_orange}>Profile page</span> A
+                      user can visit others profiles
                     </h1>
                   </div>
                 </div>

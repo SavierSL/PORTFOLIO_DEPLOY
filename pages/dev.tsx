@@ -57,8 +57,8 @@ const Dev: React.FC<BlogItProps> = (props) => {
               <div className={styles.projectDetailsContainer}>
                 <h1 className={styles.titleHeading}>Conek Dev</h1>
                 <p className={styles.description}>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Dolor labore atque dolorum quam non cumque placeat qui ipsum!s
+                  I created this for devs, it is like a social web app for
+                  developers. A dev can post anything
                 </p>
                 <div className={styles.projectDetail}>
                   <div className={styles.projectDetail_image}>
@@ -66,8 +66,9 @@ const Dev: React.FC<BlogItProps> = (props) => {
                   </div>
                   <div className={styles.projectDetail_content}>
                     <h1>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Deserunt corrupti necessitatibus qui a dolorem culpa.
+                      <span className={styles.span_orange}>Log in page</span> if
+                      there is any mistakes on the input it will notify if a
+                      user have not yet registered or mispelled email or pass
                     </h1>
                   </div>
                 </div>
@@ -77,8 +78,9 @@ const Dev: React.FC<BlogItProps> = (props) => {
                   </div>
                   <div className={styles.projectDetail_content}>
                     <h1>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Aspernatur ducimus a nihil, necessitatibus hic corrupti.
+                      On this page a user can update his profile or add more
+                      infromation about his education background and work
+                      experience.
                     </h1>
                   </div>
                 </div>
@@ -87,10 +89,7 @@ const Dev: React.FC<BlogItProps> = (props) => {
                     <img src="/dev3.png" alt="" />
                   </div>
                   <div className={styles.projectDetail_content}>
-                    <h1>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Deserunt corrupti necessitatibus qui a dolorem culpa.
-                    </h1>
+                    <h1>Update profile page</h1>
                   </div>
                 </div>
                 <div className={styles.projectDetail}>
@@ -98,10 +97,7 @@ const Dev: React.FC<BlogItProps> = (props) => {
                     <img src="/dev4.png" alt="" />
                   </div>
                   <div className={styles.projectDetail_content}>
-                    <h1>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Deserunt corrupti necessitatibus qui a dolorem culpa.
-                    </h1>
+                    <h1>Add educ page</h1>
                   </div>
                 </div>
                 <div className={styles.projectDetail}>
@@ -109,10 +105,7 @@ const Dev: React.FC<BlogItProps> = (props) => {
                     <img src="/dev5.png" alt="" />
                   </div>
                   <div className={styles.projectDetail_content}>
-                    <h1>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Deserunt corrupti necessitatibus qui a dolorem culpa.
-                    </h1>
+                    <h1>News feed, a user can like and comment on posts</h1>
                   </div>
                 </div>
                 <div className={styles.projectDetail}>
@@ -120,10 +113,7 @@ const Dev: React.FC<BlogItProps> = (props) => {
                     <img src="/dev6.png" alt="" />
                   </div>
                   <div className={styles.projectDetail_content}>
-                    <h1>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Deserunt corrupti necessitatibus qui a dolorem culpa.
-                    </h1>
+                    <h1>The list of devs that registered on this web app</h1>
                   </div>
                 </div>
                 <div className={styles.projectDetail}>
@@ -131,10 +121,7 @@ const Dev: React.FC<BlogItProps> = (props) => {
                     <img src="/dev7.png" alt="" />
                   </div>
                   <div className={styles.projectDetail_content}>
-                    <h1>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Deserunt corrupti necessitatibus qui a dolorem culpa.
-                    </h1>
+                    <h1>A profile page of a developer</h1>
                   </div>
                 </div>
               </div>

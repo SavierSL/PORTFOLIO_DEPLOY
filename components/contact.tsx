@@ -190,8 +190,7 @@ const Contact: React.FC<ContactProps> = () => {
               <div className={styles.contactDetailsForm}>
                 <div className={styles.contactDetails_contactMe}>
                   <h1 style={{ color: "#fff" }}>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Dicta eaque labore fugiat placeat eveniet commodi!
+                    I am looking forward to work with you
                   </h1>
                   <div style={{ marginTop: "1rem" }}>
                     <h1 style={{ color: "#fff" }}>
