@@ -6,7 +6,7 @@ export interface IndexProps {
 
 import Intro from "../components/intro";
 import styles from "../styles/main.module.scss";
-import About from "../components/about";
+import About from "../components/About/about";
 import WebDev from "../components/webDev";
 import ScrollContainer from "../components/scrollContainer";
 import { motion } from "framer-motion";
@@ -14,7 +14,7 @@ import { ballAnimatin, scrollAnimation } from "../components/animation";
 import CustomCursor from "../components/cursor";
 import useWindowDimensions from "../components/getWindow";
 import SkillSet from "../components/skillSet";
-import Contact from "../components/contact";
+import Contact from "../components/Contact/contact";
 
 const Index: React.FC<IndexProps> = (props) => {
   const widthSize = useWindowDimensions().width;

@@ -1,6 +1,6 @@
 import React from "react";
-import FrontEndProjects from "./frontEnd";
-import ProjectComponent from "./projectComponent";
+import FrontEndProjects from "../components/FrontEnd/frontEnd";
+import ProjectComponent from "../components/Project/projectComponent";
 
 export interface ProjectProps {}
 

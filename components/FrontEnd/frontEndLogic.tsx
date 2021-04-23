@@ -1,13 +1,6 @@
-import React, { useEffect, useRef } from "react";
-import { useIntersection } from "react-use";
-import styles from "../styles/main.module.scss";
-import gsap from "gsap";
-import ProjectFrontEndComponent from "./projectComponentFrontEnd";
-export interface FrontEndProjectsProps {}
+export interface FrontEndLogicProps {}
 
-const FrontEndProjects: React.SFC<FrontEndProjectsProps> = () => {
-  const imageFrontEndRef = useRef();
-
+const FrontEndLogic = () => {
   const imagesData = [
     { image: "anime", techs: ["html", "css"] },
     { image: "awwward", techs: ["JavaScript", "GatbyJS", "Gsap", "Canva"] },
@@ -35,16 +28,7 @@ const FrontEndProjects: React.SFC<FrontEndProjectsProps> = () => {
       techs: ["JavaScript", "ReactRedux", "ReactJS"],
     },
   ];
-
-  return (
-    <>
-      <div className={styles.frontEndProjectsContainer}>
-        {imagesData.map((data) => {
-          return <ProjectFrontEndComponent key={data.image} data={data} />;
-        })}
-      </div>
-    </>
-  );
+  return { imagesData };
 };
 
-export default FrontEndProjects;
+export default FrontEndLogic;

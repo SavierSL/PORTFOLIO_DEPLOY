@@ -1,12 +1,13 @@
 import { useEffect, useRef } from "react";
 import { useDispatch } from "react-redux";
-import { hoveredCursor, pointerCursor } from "./redux/actions/cursor";
+import { hoveredCursor, pointerCursor } from "../redux/actions/cursor";
 import NextLink from "next/link";
 import { useRouter } from "next/router";
 import gsap from "gsap";
-import { onTransition } from "./redux/actions/transtition";
+import { onTransition } from "../redux/actions/transtition";
 import { useIntersection } from "react-use";
-import styles from "../styles/main.module.scss";
+import styles from "../../styles/main.module.scss";
+import ProjectComponentLogic from "./projectComponentLogic";
 export interface ProjectComponentProps {
   title: string;
   description: string;
@@ -22,53 +23,27 @@ const ProjectComponent: React.SFC<ProjectComponentProps> = ({
   link,
   stacks,
 }) => {
-  const router = useRouter();
-  const clickDetailsRef = useRef();
-  const dispatch = useDispatch();
-  const titleRef = useRef();
-  const imageProjectRef = useRef();
-  const descriptionRef = useRef();
-  const projectRevealRef = useRef();
-  const projectRef = useRef();
-  const interSection = useIntersection(projectRevealRef, {
-    root: null,
-    rootMargin: "0px",
-    threshold: 0.5,
-    //make sure to adjust the height of div that you ref to it to adjust it
-  });
-
-  const projectFadeIn = (e: any) => {
-    gsap.to(e.current, { opacity: 1 });
-  };
-  const projectFadeOut = (e: any) => {
-    gsap.to(e.current, { opacity: 0 });
-  };
+  const {
+    onLeaveHoverDetails,
+    onHoverDetails,
+    projectFadeOut,
+    projectFadeIn,
+    interSection,
+    projectRef,
+    projectRevealRef,
+    descriptionRef,
+    imageProjectRef,
+    titleRef,
+    dispatch,
+    clickDetailsRef,
+    router,
+  } = ProjectComponentLogic();
   useEffect(() => {
     interSection && interSection?.intersectionRatio < 0.5
       ? projectFadeOut(projectRef)
       : projectFadeIn(projectRef);
   }, [interSection]);
-  const onHoverDetails = () => {
-    gsap.to(clickDetailsRef.current, {
-      opacity: 1,
-      duratin: 0.5,
 
-      ease: "Power4.easeInOut",
-      transform: `translateY(-3rem)`,
-    });
-  };
-  const onLeaveHoverDetails = () => {
-    gsap.to(clickDetailsRef.current, {
-      opacity: 0,
-      duratin: 0.5,
-
-      ease: "Power4.easeInOut",
-      transform: `translateY(3rem)`,
-    });
-  };
-  useEffect(() => {
-    console.log("run");
-  }, []);
   return (
     <>
       <div className={styles.projectContainer} ref={projectRef}>
