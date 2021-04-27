@@ -5,7 +5,7 @@ import { useWindowSize } from "react-use";
 import { offTransition } from "./redux/actions/transtition";
 import styles from "../styles/main.module.scss";
 import { ballAnimatin, scrollAnimation } from "./animation";
-import CustomCursor from "./cursor";
+import CustomCursor from "./Cursor/cursor";
 import gsap from "gsap";
 export interface ScrollContainerProps {}
 

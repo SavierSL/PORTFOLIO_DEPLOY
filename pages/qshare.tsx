@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useEffect } from "react";
 import { useGlobalDispatchContext } from "../components/Context/globalContext";
-import CustomCursor from "../components/cursor";
+import CustomCursor from "../components/Cursor/cursor";
 import MainContainer from "../components/mainContainer";
 import { pointerCursor } from "../components/redux/actions/cursor";
 import { useRouter } from "next/router";

@@ -1,9 +1,7 @@
-import React, { useEffect, useRef, useState } from "react";
-import { Cursor } from "../style-components/cursor";
-import { useGlobalStateContext } from "../components/Context/globalContext";
-import { useSelector } from "react-redux";
-import { cursorStateTypes } from "./redux/reducers/cursor";
-import gsap from "gsap";
+import React, { useEffect } from "react";
+import { Cursor } from "../../style-components/cursor";
+import CursorLogic from "./cursorLogic";
+
 interface CustomCursorProps {
   data: {
     ease: number;
@@ -13,19 +11,12 @@ interface CustomCursorProps {
   };
 }
 const CustomCursor: React.FC<CustomCursorProps> = ({ data }) => {
-  const cursorStyle = useSelector((state: any) => state.cursor.cursorStyle);
-  const [mousePosition, setMousePoisition] = useState({
-    x: 0,
-    y: 0,
-  });
-  const [offsetY, setOffsetY] = useState(0);
-
-  const handleScroll = () => setOffsetY(window.pageYOffset);
-
-  const onMouseMove = (event: any) => {
-    const { pageX: x, pageY: y } = event;
-    setMousePoisition({ x, y });
-  };
+  const {
+    cursorStyle,
+    mousePosition,
+    handleScroll,
+    onMouseMove,
+  } = CursorLogic();
   useEffect(() => {
     document.addEventListener("mousemove", onMouseMove);
     window.addEventListener("scroll", handleScroll);
